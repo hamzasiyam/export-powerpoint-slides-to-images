@@ -119,7 +119,8 @@ Contributions are welcome.
 
 ## Credits
 
-Contributors are welcome; no external resources are currently credited.
+- GPT 5.2 Codex
+- Cursor
 
 ## AI Assistance Disclosure
 

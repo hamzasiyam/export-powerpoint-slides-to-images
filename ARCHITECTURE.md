@@ -1,6 +1,4 @@
-# PowerPoint Slide Exporter — Architecture & Flow
-
-## Program Flow Diagram
+# Program Flow Diagram
 
 ```mermaid
 flowchart TB

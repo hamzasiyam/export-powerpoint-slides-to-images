@@ -21,8 +21,9 @@ class SlideExporterApp:
         self.root = tk.Tk()
         # Set window title shown in title bar
         self.root.title("PowerPoint Slide to Image Exporter")
-        # Set initial size (width x height)
-        self.root.geometry("560x320")
+        # Set initial size (width x height) and minimum size
+        self.root.geometry("600x380")
+        self.root.minsize(560, 360)
         # Allow user to resize the window
         self.root.resizable(True, True)
 
@@ -36,7 +37,7 @@ class SlideExporterApp:
 
     def _build_ui(self):
         # Main container with padding around edges
-        main_frame = ttk.Frame(self.root, padding="20")
+        main_frame = ttk.Frame(self.root, padding="16")
         main_frame.pack(fill=tk.BOTH, expand=True)
 
         # --- File selection section ---
@@ -47,7 +48,7 @@ class SlideExporterApp:
         file_frame.pack(fill=tk.X, pady=(4, 12))
 
         # Listbox: shows selected files; EXTENDED allows multi-select
-        self.file_listbox = tk.Listbox(file_frame, height=5, selectmode=tk.EXTENDED)
+        self.file_listbox = tk.Listbox(file_frame, height=4, selectmode=tk.EXTENDED)
         self.file_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         # Scrollbar for when many files are added
         scrollbar = ttk.Scrollbar(file_frame, orient=tk.VERTICAL, command=self.file_listbox.yview)
@@ -84,11 +85,11 @@ class SlideExporterApp:
 
         # Progress bar: determinate = we know total and can show percentage
         self.progress_bar = ttk.Progressbar(main_frame, mode="determinate")
-        self.progress_bar.pack(fill=tk.X, pady=(0, 12))
+        self.progress_bar.pack(fill=tk.X, pady=(0, 8))
 
         # --- Export button ---
         self.export_btn = ttk.Button(main_frame, text="Export Slides to Images", command=self._export)
-        self.export_btn.pack(pady=(8, 0))
+        self.export_btn.pack(pady=(6, 0))
 
     def _add_files(self):
         # Open native file dialog; returns tuple of selected paths

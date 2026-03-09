@@ -38,7 +38,7 @@ flowchart TB
         D --> E[mainloop]
     end
 
-    subgraph GUI["gui.py (SlideExporterApp)"]
+    subgraph GUI["modules/gui.py (SlideExporterApp)"]
         E --> F[User interacts with UI]
         F --> G{User action?}
         G -->|Add files| H[_add_files]
@@ -58,7 +58,7 @@ flowchart TB
         O -->|OK| Q[For each PowerPoint file]
     end
 
-    subgraph Exporter["exporter.py"]
+    subgraph Exporter["modules/exporter.py"]
         Q --> R[export_powerpoint_slides]
         R --> S[Launch PowerPoint via COM]
         S --> T[Open presentation]

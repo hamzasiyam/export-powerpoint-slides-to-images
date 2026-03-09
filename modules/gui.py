@@ -10,7 +10,7 @@ from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 
 # Import the export function from our exporter module
-from exporter import export_powerpoint_slides
+from .exporter import export_powerpoint_slides
 
 
 class SlideExporterApp:

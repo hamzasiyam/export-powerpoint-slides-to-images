@@ -5,7 +5,7 @@ Requires Microsoft PowerPoint installed on Windows.
 """
 
 # Import the GUI application class
-from gui import SlideExporterApp
+from modules.gui import SlideExporterApp
 
 # Only run when executed directly (not when imported as a module)
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-# PowerPoint Slide to Image Exporter
+# PowerPoint File to Image Exporter
 
 A Python GUI tool that exports each slide from a PowerPoint file as a PNG image.
 
